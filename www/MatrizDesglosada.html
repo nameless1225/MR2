@@ -9,12 +9,18 @@
     <link type="text/css" rel="stylesheet" href="materialize/css/materialize.css" media="screen,projection" />
     <link rel="stylesheet" href="css/Style.css">
 
-   
+
     <title>Matrix Data</title>
 </head>
-
+<style>
+    thead{
+        font-weight: bold;
+    }
+</style>
 <body>
     <div id="listas">
+        <h2>Resultados de la Matriz</h2>
+        <p>En esta parte, usted podra ver a detalle un cruze entre las probabilidades y severidades.</p>
         <div id="divMatrix">
             <h3>Data Matrix</h3>
             <table id="tablaDatos" class="highlight">
@@ -40,15 +46,23 @@
                 </tbody>
             </table>
         </div>
-
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="divider"></div>
+<div class="container">
         <div id="divProbabilidad">
-        </div>
-        <div id="divSeveridad">
-        </div>
+            </div>
+            <div id="divSeveridad">
+            </div>
+            <button class="waves-effect light-blue darken-4 btn" onclick="HTMLtoPDF();">Descargar PDF</button>
+</div>
+
     </div>
     <!--<button onclick="crearTabla(lstProbabilidades,'divProbabilidad','Tabla Probabilidades'); crearTabla(lstSeveridades,'divSeveridad','Tabla Severidades');">Cargar Tablas de Datos</button>
                     -->
-    <button class="waves-effect light-blue darken-4 btn" onclick="HTMLtoPDF();">Descargar PDF</button>
     <script src="js/variables.js"></script>
     <script type="text/javascript" src="js/Colour.js"></script>
     <script src="js/matrixData.js"></script>

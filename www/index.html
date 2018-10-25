@@ -18,105 +18,122 @@
 </head>
 
 <body>
-        <h2>hola mundo :v</h2>
-        <button class="waves-effect light-blue darken-4 btn" onclick="localStorage.clear(); location.reload();">Nuevo</button>
-        <div>
-                <h5>Tabla Probabilidades
-                        <button class="waves-effect light-blue darken-4 btn" id="btnProbabilidad">+</button>
-                        <button class="waves-effect light-blue darken-4 btn" id="btnPopProbabilidad" onclick="quitar(lstProbabilidades,'tbProbabilidades');">-</button>
-                </h5>
-        </div>
-        <br>
-        <div>
-                <table class="highlight">
-                        <thead>
-                                <tr>
-                                        <th>ID</th>
-                                        <th>Categoria</th>
-                                        <th>Desde</th>
-                                        <th>Hasta</th>
-                                        <th>Media</th>
-                                        <th>Descripcion Cualitativa 1</th>
-                                        <th>Descripcion Cualitativa 2</th>
-                                </tr>
-                        </thead>
-                        <tbody id="tbProbabilidades">
-
-                        </tbody>
-                </table>
-        </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <div>
-                <h5>Tabla Severidades
-                        <button class="waves-effect light-blue darken-4 btn" id="btnSeveridad">+</button>
-                        <button class="waves-effect light-blue darken-4 btn" id="btnPopSeveridad" onclick="quitar(lstSeveridades,'tbSeveridades');">-</button>
-                </h5>
-        </div>
-        <br>
-        <div>
-                <table class="highlight">
-                        <thead>
-                                <tr>
-                                        <th>ID</th>
-                                        <th>Categoria</th>
-                                        <th>Desde</th>
-                                        <th>Hasta</th>
-                                        <th>Media</th>
-                                        <th>Descripcion Cualitativa 1</th>
-                                        <th>Descripcion Cualitativa 2</th>
-                                </tr>
-                        </thead>
-                        <tbody id="tbSeveridades">
-
-                        </tbody>
-                </table>
-        </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <div>
-                <div>
-                        <h5>Rating
-                                <button class="waves-effect light-blue darken-4 btn" id="datos" onclick="AddColor()">+</button>
-                                <button class="waves-effect light-blue darken-4 btn" id="datos" onclick="RestColor()">-</button>
-                        </h5>
-                        <!--<input type="button" class="waves-effect light-blue darken-4 btn" id="datos" onclick="AddColor()" value="+">
-                <input type="button" class="waves-effect light-blue darken-4 btn" id="datos" onclick="RestColor()" value="-">-->
+        <!--<nav class="light-blue darken-4" role="navigation">
+                <div class="nav-wrapper container">
+                                
                 </div>
-                <div id="ContenedorColor" class="ContGenerada">
-                        <table id="TabladeColor" class="TabColor1">
+        </nav>-->
+        <div class="light-blue darken-4 center" style="color: white">
+                <h2>Gestion Riesgos</h2>
+        </div>
 
+        <div class="container">
+                <div class="row">
+
+                        <p class="col s12">Esta es una aplicacion hibrida, sirve para armar simples Matrices de Riesgos. Las cuales pueden ayudar
+                                a identificar, valga la redundancia, posibles riesgos.</p>
+                        <button class="waves-effect light-blue darken-4 btn" onclick="localStorage.clear(); location.reload();">Reset Data</button>
+                </div>
+
+                <div class="row">
+                        <h5 class="col s4">Tabla Probabilidades</h5>
+                        <div class="col s6 offset-s2">
+                                <button class="btn-floating btn-large waves-effect waves-light light-blue darken-4" id="btnProbabilidad">+</button>
+                                <button class="btn-floating btn-large waves-effect waves-light red" id="btnPopProbabilidad" onclick="quitar(lstProbabilidades,'tbProbabilidades');">-</button>
+                        </div>
+                </div>
+                <br>
+                <div class="col s12">
+                        <table class="highlight">
+                                <thead>
+                                        <tr>
+                                                <th>ID</th>
+                                                <th>Categoria</th>
+                                                <th>Desde</th>
+                                                <th>Hasta</th>
+                                                <th>Media</th>
+                                                <th>Descripcion Cualitativa 1</th>
+                                                <th>Descripcion Cualitativa 2</th>
+                                        </tr>
+                                </thead>
+                                <tbody id="tbProbabilidades">
+
+                                </tbody>
                         </table>
                 </div>
-
                 <br>
                 <br>
+                <br>
+                <div class="row">
+                        <h4 class="col s6">Tabla Severidades</h4>
+                        <div class="col s6">
+                                <button class="btn-floating btn-large waves-effect waves-light light-blue darken-4" id="btnSeveridad">+</button>
+                                <button class="btn-floating btn-large waves-effect waves-light red" id="btnPopSeveridad" onclick="quitar(lstSeveridades,'tbSeveridades');">-</button>
+                        </div>
 
+
+                </div>
+                <br>
+                <div>
+                        <table class="highlight">
+                                <thead>
+                                        <tr>
+                                                <th>ID</th>
+                                                <th>Categoria</th>
+                                                <th>Desde</th>
+                                                <th>Hasta</th>
+                                                <th>Media</th>
+                                                <th>Descripcion Cualitativa 1</th>
+                                                <th>Descripcion Cualitativa 2</th>
+                                        </tr>
+                                </thead>
+                                <tbody id="tbSeveridades">
+
+                                </tbody>
+                        </table>
+                </div>
+                <br>
+                <br>
+                <br>
+                <div>
+                        <div class="row">
+                                <h5 class="col s3">Rating</h5>
+                                <div class="col s6">
+                                        <button class="btn-floating btn-small waves-effect waves-light light-blue darken-4" id="datos" onclick="AddColor()">+</button>
+                                        <button class="btn-floating btn-small waves-effect waves-light red" id="datos" onclick="RestColor()">-</button>
+                                </div>
+
+                                <!--<input type="button" class="waves-effect light-blue darken-4 btn" id="datos" onclick="AddColor()" value="+">
+                                <input type="button" class="waves-effect light-blue darken-4 btn" id="datos" onclick="RestColor()" value="-">-->
+                        </div>
+                        <div id="ContenedorColor" class="ContGenerada">
+                                <table id="TabladeColor" class="TabColor1">
+
+                                </table>
+                        </div>
+
+                        <br>
+                        <br>
+
+                </div>
+
+
+                <table>
+                        <tr>
+                                <th id="Izquierda"></th>
+                                <th>
+                                        <div id="MatrizContenedor"></div>
+                                </th>
+                        </tr>
+                        <tr>
+                                <th></th>
+                                <th id="Abajo"></th>
+                        </tr>
+                </table>
+
+                <button id="btnSiguiente" class="waves-effect light-blue darken-4 btn" onclick="CrearJson();">Data Matrix</button>
         </div>
 
-
-        <table>
-                <tr>
-                        <th id="Izquierda"></th>
-                        <th>
-                                <div id="MatrizContenedor"></div>
-                        </th>
-                </tr>
-                <tr>
-                        <th></th>
-                        <th id="Abajo"></th>
-                </tr>
-        </table>
-
-        <button id="btnSiguiente" class="waves-effect light-blue darken-4 btn" onclick="CrearJson();">Data Matrix</button>
 
         <!-- Modal JQuery Severidad-->
 
